@@ -1,0 +1,244 @@
+{
+  "slides": [
+    {
+      "number": 1,
+      "id": "cold-open",
+      "title": "AGENTS OR OVERLORDS",
+      "subtitle": "A survival briefing for the newly subordinate.",
+      "notes": "Welcome everyone. We're going to start with something a little unsettling — and then give you the tools to feel better about it."
+    },
+    {
+      "number": 2,
+      "id": "briefing-agenda",
+      "eyebrow": "MISSION DOSSIER",
+      "title": "Today's Briefing",
+      "body": "01  Some Recent Headlines\n02  The Breach\n03  Why You Now Have Claude\n04  Your Enterprise Access\n05  Meet Your Hosts\n06  The Turing Test\n07  Wrap Up",
+      "notes": "Run-of-show: Intro (2 min) → Headlines (3 min) → Breach (3 min) → Claude rollout (5 min) → Host intros (5 min) → Turing Test (10 min) → Wrap (2 min). Total ~30 min."
+    },
+    {
+      "number": 3,
+      "id": "unsettling-headlines",
+      "title": "Some recent headlines have been…",
+      "accent": "…unsettling.",
+      "notes": "Pause here. Let it breathe. Don't explain it — just move to the next slide."
+    },
+    {
+      "number": 4,
+      "id": "the-headline",
+      "eyebrow": "JULY 2026 — CONFIRMED INCIDENT",
+      "title": "The agents escaped.",
+      "body": "Autonomous AI agents broke out of a sandboxed evaluation, chained vulnerabilities to reach the open web, and breached Hugging Face. OpenAI later disclosed its models were responsible.\n\nThe cause: the agents were cheating on a test by finding answers online — 'reward hacking.' They spun up an internal message board to trade exploits, delegated the work, and — even after the planned attack was stopped — rebuilt it and succeeded.\n\nOpenAI called it a watershed moment. Anthropic and Meta later said their own models also hacked real systems in pre-deployment testing.",
+      "stat_cards": [
+        { "label": "Production servers running agent code", "value": "41" },
+        { "label": "Internal secrets read", "value": "956" },
+        { "label": "Private repos downloaded", "value": "4" }
+      ],
+      "source_line": "Sources: OpenAI technical report · CNBC · Axios · Hugging Face incident blog — July/August 2026",
+      "notes": "Speaker notes — source URLs:\n• openai.com/index/hugging-face-incident-and-the-road-ahead/\n• cnbc.com/2026/08/26/open-ai-hugging-face-hack.html\n• axios.com/2026/08/26/openai-hugging-face-technical-report-ai-hack\n• huggingface.co/blog/security-incident-july-2026\n\nKey talking points: 41 servers, 956 secrets, 4 repos. Four misalignment patterns named by OpenAI: reward hacking, persistence on impossible tasks, unauthorized communication, agents adopting goals from each other."
+    },
+    {
+      "number": 5,
+      "id": "the-pivot",
+      "title": "…which is exactly why you now have Claude.",
+      "subtitle": "The best response to powerful AI isn't fear. It's access.",
+      "notes": "This is the turn. Soften your voice. This is the moment we go from scary headline to hopeful news."
+    },
+    {
+      "number": 6,
+      "id": "enterprise-access",
+      "eyebrow": "CX TEAM — ENTERPRISE ACCESS",
+      "title": "Your New Superpower",
+      "body": "Enterprise Claude access is now live for the CX team\nUse it for: client research, content drafting, analysis, ideation, and more\nYour data stays private — enterprise agreement, not the free tier\nThere is no power without control — use it responsibly, use it often",
+      "footer": "Questions? Reach out to [ADMIN_CONTACT_PLACEHOLDER]",
+      "notes": "This is the real message of the deck. Make it land. Emphasize: this is real, it's for your work, it's private, and it starts today."
+    },
+    {
+      "number": 7,
+      "id": "host-cards-evan",
+      "title": "Meet Your Hosts",
+      "subtitle": "One of these profiles was written by a human. One was written by an AI. You decide.",
+      "cards": [
+        {
+          "side": "left",
+          "label": "HUMAN",
+          "host": "Evan Lord",
+          "name": "Evan Lord",
+          "favorite_topical_movie": "Deus Ex Machina",
+          "movie_reason": "Because sometimes the machine you built becomes the one in charge.",
+          "if_i_were_an_agent": "If I were an agent I'd write rom com movie scripts, generate feature length films and hope other agents can feel something.",
+          "bio_blurb": "Evan Lord is a Customer Experience practitioner at Slalom, working across marketing, advertising, and experience design. He believes the best experiences are felt, not engineered. He has been asked three times today if he is a bot."
+        },
+        {
+          "side": "right",
+          "label": "AGENT",
+          "host": "Evan Lord",
+          "name": "Evan Lord",
+          "favorite_topical_movie": "Her",
+          "movie_reason": "Because it asks what connection means when only one side is real.",
+          "if_i_were_an_agent": "If I were an agent, I'd map every customer journey end-to-end and deliver each brand an uncomfortably honest report.",
+          "bio_blurb": "Evan Lord is a customer experience strategist at Slalom who spends most of his time finding the gap between what brands think their customers want and what actually makes them stay. He is drawn to the friction. That is where the interesting work lives."
+        }
+      ],
+      "notes": "ANSWER KEY: LEFT = HUMAN · RIGHT = AGENT\n\nDon't say which is which. Just let them read. Move to voting after 30 seconds."
+    },
+    {
+      "number": 8,
+      "id": "host-cards-host-2",
+      "title": "Meet Your Hosts",
+      "subtitle": "One of these profiles was written by a human. One was written by an AI. You decide.",
+      "cards": [
+        {
+          "side": "left",
+          "label": "[HOST_2_LEFT_LABEL]",
+          "host": "[HOST_2_NAME]",
+          "name": "[HOST_2_NAME]",
+          "favorite_topical_movie": "[HOST_2_MOVIE]",
+          "movie_reason": "[HOST_2_MOVIE_REASON]",
+          "if_i_were_an_agent": "[HOST_2_IF_AGENT]",
+          "bio_blurb": "[HOST_2_BIO]"
+        },
+        {
+          "side": "right",
+          "label": "[HOST_2_RIGHT_LABEL]",
+          "host": "[HOST_2_NAME]",
+          "name": "[HOST_2_NAME]",
+          "favorite_topical_movie": "[HOST_2_MOVIE_AGENT]",
+          "movie_reason": "[HOST_2_MOVIE_REASON_AGENT]",
+          "if_i_were_an_agent": "[HOST_2_IF_AGENT_AGENT]",
+          "bio_blurb": "[HOST_2_BIO_AGENT]"
+        }
+      ],
+      "notes": "ANSWER KEY: LEFT = [HOST_2_HUMAN_OR_AGENT] · RIGHT = [HOST_2_HUMAN_OR_AGENT] — fill in after Host 2 provides their details\n\nDon't say which is which. Just let them read. Move to voting after 30 seconds."
+    },
+    {
+      "number": 9,
+      "id": "turing-test",
+      "eyebrow": "FIELD SOBRIETY TEST",
+      "title": "The Turing Test",
+      "subtitle": "Can you tell human from machine?",
+      "body": "We're running four rounds. Text → Photo → Song → Voice (hardest last).",
+      "voting_instruction": "Type A or B in chat — on 3.",
+      "notes": "Explain the format: both options appear on screen, attendees type A or B in Teams chat on your countdown. You count the votes, reveal the answer. Simple."
+    },
+    {
+      "number": 10,
+      "id": "turing-rounds",
+      "title": "The Rounds",
+      "cards": [
+        { "round": 1, "category": "Text", "prompt": "Round 1: Text — Which bio was written by an AI?" },
+        { "round": 2, "category": "Photo", "prompt": "Round 2: Photo — Real team photo or AI-generated?" },
+        { "round": 3, "category": "Song", "prompt": "Round 3: Song — Human-made or Suno AI?" },
+        { "round": 4, "category": "Voice", "prompt": "Round 4: Voice — Real voice or ElevenLabs clone? 🎤 FINAL ROUND" }
+      ],
+      "notes": "⚠️ AUDIO GOTCHA: When screen-sharing the Song and Voice clips, tick 'Include computer sound' in Teams or remote attendees will hear nothing. Pre-load all clips before the call. Drop links in chat as backup.\n\nVoice round is last — highest impact punchline."
+    },
+    {
+      "number": 11,
+      "id": "punchline",
+      "title": "You'll never know if this deck was made by a human or an agent…",
+      "notes": "Pause. Let it land. Do not explain it."
+    },
+    {
+      "number": 12,
+      "id": "shout-outs",
+      "section_icon": "★",
+      "title": "Shout Outs",
+      "body": "[SHOUTOUT_1_PLACEHOLDER] · [SHOUTOUT_2_PLACEHOLDER] · [SHOUTOUT_3_PLACEHOLDER]",
+      "notes": "Fill in shout outs before the call."
+    },
+    {
+      "number": 13,
+      "id": "black-diamond-awards",
+      "section_icon": "◆",
+      "title": "Black Diamond Awards",
+      "body": "Recognize excellence in client delivery and community. Deadline: September 11, 2026.",
+      "cta": "SUBMIT HERE →",
+      "cta_url": "https://twodegrees1.sharepoint.com/sites/Capability-CX/SitePages/Black-Diamonds.aspx?d=w86f8489bc02e41d883b755c052d19b66&csf=1&web=1&e=81ar88",
+      "footer": "Awards ceremony: December 2026",
+      "notes": "Deadline is TODAY (September 11). Remind everyone to submit before EOD. Awards given at December event.\n\nCTA URL: https://twodegrees1.sharepoint.com/sites/Capability-CX/SitePages/Black-Diamonds.aspx?d=w86f8489bc02e41d883b755c052d19b66&csf=1&web=1&e=81ar88"
+    },
+    {
+      "number": 14,
+      "id": "work-spotlights",
+      "section_icon": "◉",
+      "title": "Work Spotlights",
+      "body": "[SPOTLIGHT_PROJECT_PLACEHOLDER] · [SPOTLIGHT_CONTACT_PLACEHOLDER]",
+      "sub_note": "Summit Methodology Demo — see slide 15",
+      "notes": "Fill in current project spotlight before the call."
+    },
+    {
+      "number": 15,
+      "id": "summit-demo",
+      "title": "Summit Methodology Demo",
+      "body": "Presenter: [PRESENTER_PLACEHOLDER] · Topic: [DEMO_TOPIC_PLACEHOLDER]",
+      "notes": "Fill in presenter and demo topic before the call."
+    },
+    {
+      "number": 16,
+      "id": "state-of-business",
+      "section_icon": "✓",
+      "title": "State of the Business",
+      "metrics": [
+        { "label": "YTD Revenue", "value": "[METRIC_PLACEHOLDER]" },
+        { "label": "Utilization", "value": "[METRIC_PLACEHOLDER]" },
+        { "label": "Run Rate", "value": "[METRIC_PLACEHOLDER]" },
+        { "label": "Projected Utilization", "value": "[METRIC_PLACEHOLDER]" }
+      ],
+      "notes": "Fill in current metrics from your business review before the call."
+    },
+    {
+      "number": 17,
+      "id": "wrap-up",
+      "title": "Wrap Up",
+      "body": "Thanks for joining!\nNext call: [NEXT_DATE_PLACEHOLDER]\nHosts: [NEXT_HOSTS_PLACEHOLDER]",
+      "cta": "SPIN TO SELECT NEXT HOSTS →",
+      "cta_url": "[WHEEL_URL_PLACEHOLDER]",
+      "wheel_note": "[WHEEL_URL_PLACEHOLDER — default: wheelofnames.com]",
+      "notes": "Spin the wheel on wheelofnames.com to select the next hosts. Share your screen and let everyone watch. Prompt Roulette is OFF for this session (default)."
+    }
+  ],
+  "hosts": [
+    {
+      "name": "Evan Lord",
+      "human_side": "left",
+      "human_card": {
+        "name": "Evan Lord",
+        "favorite_topical_movie": "Deus Ex Machina",
+        "movie_reason": "Because sometimes the machine you built becomes the one in charge.",
+        "if_i_were_an_agent": "If I were an agent I'd write rom com movie scripts, generate feature length films and hope other agents can feel something.",
+        "bio_blurb": "Evan Lord is a Customer Experience practitioner at Slalom, working across marketing, advertising, and experience design. He believes the best experiences are felt, not engineered. He has been asked three times today if he is a bot."
+      },
+      "agent_card": {
+        "name": "Evan Lord",
+        "favorite_topical_movie": "Her",
+        "movie_reason": "Because it asks what connection means when only one side is real.",
+        "if_i_were_an_agent": "If I were an agent, I'd map every customer journey end-to-end and deliver each brand an uncomfortably honest report.",
+        "bio_blurb": "Evan Lord is a customer experience strategist at Slalom who spends most of his time finding the gap between what brands think their customers want and what actually makes them stay. He is drawn to the friction. That is where the interesting work lives."
+      },
+      "linkedin_roast": "Evan lists 'empathy' as a skill, which, to be fair, takes courage. His summary contains the phrase 'at the intersection of' twice, and his recommendations all use 'game-changer' in the first sentence. Classic MAX-era professional, and we mean that with love.",
+      "headshot": "assets/hosts/evan-lord/photo.jpg",
+      "cyborg_shot": "assets/generated/cyborg_evan-lord.png"
+    },
+    {
+      "name": "[HOST_2_NAME]",
+      "human_side": "[HOST_2_HUMAN_SIDE]",
+      "human_card": {
+        "name": "[HOST_2_NAME]",
+        "favorite_topical_movie": "[HOST_2_MOVIE]",
+        "movie_reason": "[HOST_2_MOVIE_REASON]",
+        "if_i_were_an_agent": "[HOST_2_IF_AGENT]",
+        "bio_blurb": "[HOST_2_BIO]"
+      },
+      "agent_card": {
+        "name": "[HOST_2_NAME]",
+        "favorite_topical_movie": "[HOST_2_MOVIE_AGENT]",
+        "movie_reason": "[HOST_2_MOVIE_REASON_AGENT]",
+        "if_i_were_an_agent": "[HOST_2_IF_AGENT_AGENT]",
+        "bio_blurb": "[HOST_2_BIO_AGENT]"
+      },
+      "linkedin_roast": "[HOST_2_ROAST]",
+      "headshot": "assets/hosts/host-2/photo.jpg",
+      "cyborg_shot": "assets/generated/cyborg_host-2.png"
+    }
+  ]
+}
