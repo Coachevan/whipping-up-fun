@@ -1,0 +1,35 @@
+{
+  "palette": {
+    "navy": "0B1F44",
+    "lime": "CFFF00",
+    "cyan": "00D4D8",
+    "pink": "FF4F7B",
+    "slalomBlue": "0C62FB",
+    "alertRed": "F30009",
+    "ink": "151515",
+    "muted": "74685D",
+    "lightCard": "E3E7ED"
+  },
+  "fonts": {
+    "title": "Arial",
+    "body": "Calibri",
+    "eyebrow": "Courier New",
+    "editorial": "Georgia"
+  },
+  "edgeBar": {
+    "x": 0, "y": 0, "w": 0.12, "h": 7.5,
+    "limeSegment": {"y": 0, "h": 7.5},
+    "cyanSegment": {"y": 1.5, "h": 1.5},
+    "pinkSegment": {"y": 3.0, "h": 1.5}
+  },
+  "wordmark": {
+    "text": "slalom",
+    "x": 11.29, "y": 0.53, "w": 1.42, "h": 0.37,
+    "whitePath": "assets/generated/wordmark_white.png",
+    "bluePath": "assets/generated/wordmark_blue.png",
+    "textFallback": false
+  },
+  "slide": {
+    "w": 13.333, "h": 7.5
+  }
+}
