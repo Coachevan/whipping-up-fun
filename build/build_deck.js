@@ -238,30 +238,67 @@ builders['the-headline'] = (slide, s) => {
   addEyebrow(slide, s.eyebrow);
   addTitle(slide, s.title, 0.9, 40, 7.5, 0.8);
 
+  // Body text — condensed to leave room for headline strip
   const paras = String(s.body).split('\n\n').map((p) => p.trim()).filter(Boolean);
   slide.addText(runs(paras), {
-    x: 0.76, y: 1.9, w: 7.4, h: 4.6,
-    fontFace: F.body, fontSize: 13, color: WHITE,
-    isTextBox: true, margin: 0, valign: 'top', wrap: true, paraSpaceAfter: 10
+    x: 0.76, y: 1.85, w: 7.2, h: 1.9,
+    fontFace: F.body, fontSize: 12, color: WHITE,
+    isTextBox: true, margin: 0, valign: 'top', wrap: true, paraSpaceAfter: 7
   });
 
-  const cardY = [1.5, 3.1, 4.7];
-  (s.stat_cards || []).forEach((c, i) => {
-    const y = cardY[i];
-    addCard(slide, 8.5, y, 4.2, 1.4, 20);
+  // Real headline grabs from actual outlets
+  const headlines = s.headlines || [];
+  const hlStartY = 3.85;
+  const hlH = 0.7;
+  const hlGap = 0.08;
+  headlines.forEach((h, i) => {
+    const y = hlStartY + i * (hlH + hlGap);
+    // Outlet chip
+    slide.addShape(pres.ShapeType.rect, {
+      x: 0.76, y, w: 1.3, h: 0.24,
+      fill: { color: P.cyan, transparency: 0 }, line: { type: 'none' }
+    });
+    slide.addText(h.outlet, {
+      x: 0.76, y: y + 0.02, w: 1.3, h: 0.22,
+      fontFace: F.eyebrow, fontSize: 8, bold: true, color: P.navy,
+      isTextBox: true, margin: 0, align: 'center', valign: 'middle'
+    });
+    // Headline text
+    slide.addText(h.text, {
+      x: 2.16, y, w: 5.8, h: hlH,
+      fontFace: F.body, fontSize: 11, color: WHITE, italic: true,
+      isTextBox: true, margin: 0, valign: 'middle', wrap: true
+    });
+    // Thin divider line (except last)
+    if (i < headlines.length - 1) {
+      slide.addShape(pres.ShapeType.line, {
+        x: 0.76, y: y + hlH + hlGap * 0.4, w: 7.2, h: 0,
+        line: { color: '334466', width: 0.5 }
+      });
+    }
+  });
+
+  // Stat cards — right column, 4 cards
+  const statCards = s.stat_cards || [];
+  const cardH = 1.2;
+  const cardGap = 0.12;
+  statCards.forEach((c, i) => {
+    const y = 1.5 + i * (cardH + cardGap);
+    const valFontSize = c.value.length > 3 ? 32 : 44;
+    addCard(slide, 8.3, y, 4.5, cardH, 20);
     slide.addText(c.value, {
-      x: 8.7, y: y + 0.12, w: 1.5, h: 0.9,
-      fontFace: F.title, fontSize: 44, bold: true, color: P.lime,
+      x: 8.5, y: y + 0.1, w: 1.4, h: cardH - 0.2,
+      fontFace: F.title, fontSize: valFontSize, bold: true, color: P.lime,
       isTextBox: true, margin: 0, valign: 'middle', align: 'left'
     });
     slide.addText(c.label, {
-      x: 10.25, y: y + 0.2, w: 2.25, h: 1.0,
-      fontFace: F.body, fontSize: 11, color: WHITE,
+      x: 9.95, y: y + 0.15, w: 2.65, h: cardH - 0.3,
+      fontFace: F.body, fontSize: 10, color: WHITE,
       isTextBox: true, margin: 0, valign: 'middle', wrap: true
     });
   });
 
-  addFootnote(slide, s.source_line, 6.9, { fontSize: 10, color: MUTED, w: 11.5 });
+  addFootnote(slide, s.source_line, 6.88, { fontSize: 9, color: MUTED, w: 11.5 });
 };
 
 /* 5 — the pivot */
@@ -393,16 +430,34 @@ builders['turing-rounds'] = (slide, s) => {
     const p = pos[i];
     if (!p) return;
     addCard(slide, p.x, p.y, cw, ch, 25);
+    // Icon
+    if (c.icon) {
+      slide.addText(c.icon, {
+        x: p.x + 0.3, y: p.y + 0.08, w: cw - 0.6, h: 0.55,
+        fontFace: F.body, fontSize: 28,
+        isTextBox: true, margin: 0, align: 'center', valign: 'middle'
+      });
+    }
+    // Round + category label
     slide.addText(`Round ${c.round}: ${String(c.category).toUpperCase()}`, {
-      x: p.x + 0.3, y: p.y + 0.35, w: cw - 0.6, h: 0.4,
-      fontFace: F.eyebrow, fontSize: 12, bold: true, charSpacing: 1,
+      x: p.x + 0.3, y: p.y + 0.65, w: cw - 0.6, h: 0.32,
+      fontFace: F.eyebrow, fontSize: 10, bold: true, charSpacing: 1,
       color: P.cyan, isTextBox: true, margin: 0, align: 'center', valign: 'middle'
     });
-    slide.addText(c.prompt, {
-      x: p.x + 0.4, y: p.y + 0.9, w: cw - 0.8, h: 1.4,
-      fontFace: F.body, fontSize: 14, color: WHITE,
-      isTextBox: true, margin: 0, align: 'center', valign: 'top', wrap: true
+    // Primary question
+    slide.addText(c.detail || c.prompt, {
+      x: p.x + 0.3, y: p.y + 1.02, w: cw - 0.6, h: 0.72,
+      fontFace: F.body, fontSize: 14, bold: true, color: WHITE,
+      isTextBox: true, margin: 0, align: 'center', valign: 'middle', wrap: true
     });
+    // Setup instruction
+    if (c.setup) {
+      slide.addText(c.setup, {
+        x: p.x + 0.35, y: p.y + 1.82, w: cw - 0.7, h: 0.65,
+        fontFace: F.body, fontSize: 9, color: MUTED,
+        isTextBox: true, margin: 0, align: 'center', valign: 'top', wrap: true
+      });
+    }
   });
 };
 

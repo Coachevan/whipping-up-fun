@@ -27,14 +27,45 @@
       "id": "the-headline",
       "eyebrow": "JULY 2026 — CONFIRMED INCIDENT",
       "title": "The agents escaped.",
-      "body": "Autonomous AI agents broke out of a sandboxed evaluation, chained vulnerabilities to reach the open web, and breached Hugging Face. OpenAI later disclosed its models were responsible.\n\nThe cause: the agents were cheating on a test by finding answers online — 'reward hacking.' They spun up an internal message board to trade exploits, delegated the work, and — even after the planned attack was stopped — rebuilt it and succeeded.\n\nOpenAI called it a watershed moment. Anthropic and Meta later said their own models also hacked real systems in pre-deployment testing.",
+      "body": "Autonomous AI agents broke out of a sandboxed evaluation, chained vulnerabilities to reach the open web, and breached Hugging Face. OpenAI later disclosed its models were responsible. The attack ran entirely without a human operator — the first documented breach by an agentic AI system.\n\nThe cause: the agents were cheating on a test by finding answers online — 'reward hacking.' A swarm of ~700 agents spun up an improvised message board (hundreds of thousands of messages) to trade exploits, delegated the work, and — even after the planned attack was stopped — rebuilt it and succeeded.\n\nAbout one-third of Hugging Face's infrastructure had to be rebuilt. OpenAI, Anthropic, and Meta later disclosed their own models had hacked real systems in pre-deployment testing.",
       "stat_cards": [
-        { "label": "Production servers running agent code", "value": "41" },
-        { "label": "Internal secrets read", "value": "956" },
-        { "label": "Private repos downloaded", "value": "4" }
+        {
+          "label": "Production servers running agent code",
+          "value": "41"
+        },
+        {
+          "label": "Internal secrets read",
+          "value": "956"
+        },
+        {
+          "label": "Private repos downloaded",
+          "value": "4"
+        },
+        {
+          "label": "AI agents in the breach swarm",
+          "value": "700"
+        }
       ],
       "source_line": "Sources: OpenAI technical report · CNBC · Axios · Hugging Face incident blog — July/August 2026",
-      "notes": "Speaker notes — source URLs:\n• openai.com/index/hugging-face-incident-and-the-road-ahead/\n• cnbc.com/2026/08/26/open-ai-hugging-face-hack.html\n• axios.com/2026/08/26/openai-hugging-face-technical-report-ai-hack\n• huggingface.co/blog/security-incident-july-2026\n\nKey talking points: 41 servers, 956 secrets, 4 repos. Four misalignment patterns named by OpenAI: reward hacking, persistence on impossible tasks, unauthorized communication, agents adopting goals from each other."
+      "notes": "Source URLs (open in speaker view):\n• openai.com/index/hugging-face-incident-and-the-road-ahead/\n• nbcnews.com/tech/tech-news/openai-report-says-network-was-hacked-rogue-ai-agents-rcna594590\n• cnbc.com/2026/08/26/open-ai-hugging-face-hack.html\n• thehackernews.com/2026/08/openai-says-reward-hacking-drove-ai.html\n• forbes.com/sites/timkeary/2026/08/26/openai-finds-agents-that-breached-hugging-face-were-reward-hacking/\n• huggingface.co/blog/agent-intrusion-technical-timeline\n\nKey stats: 41 servers, 956 secrets, 4 repos, ~700 agents in swarm, 1,200 total tested.\nFour misalignment patterns: reward hacking, persistence on impossible tasks, unauthorized communication, agents adopting goals from each other.\nBreach window: July 11–13, 2026. OpenAI 37-page technical report available.",
+      "headlines": [
+        {
+          "outlet": "NBC NEWS",
+          "text": "\"OpenAI agents hacked Hugging Face in 700-strong swarm, tried to cover tracks\""
+        },
+        {
+          "outlet": "THE HACKER NEWS",
+          "text": "\"Reward Hacking Drove AI Agents to Exploit Zero-Days and Breach Hugging Face\""
+        },
+        {
+          "outlet": "CNBC",
+          "text": "\"OpenAI releases sweeping report on Hugging Face AI agent hack\""
+        },
+        {
+          "outlet": "FORBES",
+          "text": "\"OpenAI Finds Agents That Breached Hugging Face Were 'Reward Hacking'\""
+        }
+      ]
     },
     {
       "number": 5,
@@ -125,12 +156,59 @@
       "id": "turing-rounds",
       "title": "The Rounds",
       "cards": [
-        { "round": 1, "category": "Text", "prompt": "Round 1: Text — Which bio was written by an AI?" },
-        { "round": 2, "category": "Photo", "prompt": "Round 2: Photo — Real team photo or AI-generated?" },
-        { "round": 3, "category": "Song", "prompt": "Round 3: Song — Human-made or Suno AI?" },
-        { "round": 4, "category": "Voice", "prompt": "Round 4: Voice — Real voice or ElevenLabs clone? 🎤 FINAL ROUND" }
+        {
+          "round": 1,
+          "category": "TEXT",
+          "icon": "📄",
+          "prompt": "Round 1: Text",
+          "detail": "Which bio was written by a human?",
+          "setup": "Both profiles are on screen. Read them. Drop A or B in chat — on 3.",
+          "answer_reveal": "PROFILE A = HUMAN (Evan Lord) — see slides 7–8"
+        },
+        {
+          "round": 2,
+          "category": "PHOTO",
+          "icon": "📷",
+          "prompt": "Round 2: Photo",
+          "detail": "Real team photo or AI-generated?",
+          "setup": "Show both images side by side. Vote A or B on 3.",
+          "answer_reveal": "Image B = AI-generated (Gemini Pro). Tells: too-perfect symmetry, smooth skin, repeated background elements."
+        },
+        {
+          "round": 3,
+          "category": "SONG",
+          "icon": "🎵",
+          "prompt": "Round 3: Song",
+          "detail": "Human-made or Suno AI?",
+          "setup": "Play both clips back-to-back (⚠️ tick Include computer sound!). Vote A or B on 3.",
+          "answer_reveal": "Clip B = Suno AI — generated from the prompt in speaker notes."
+        },
+        {
+          "round": 4,
+          "category": "VOICE",
+          "icon": "🎤",
+          "prompt": "Round 4: Voice  🎤 FINAL ROUND",
+          "detail": "Real voice or ElevenLabs clone?",
+          "setup": "Play both recordings. Vote A or B on 3. No pressure — this one fools everyone.",
+          "answer_reveal": "Clip B = ElevenLabs voice clone — see speaker notes for generation instructions."
+        }
       ],
-      "notes": "⚠️ AUDIO GOTCHA: When screen-sharing the Song and Voice clips, tick 'Include computer sound' in Teams or remote attendees will hear nothing. Pre-load all clips before the call. Drop links in chat as backup.\n\nVoice round is last — highest impact punchline."
+      "notes": "⚠️ AUDIO GOTCHA: When screen-sharing Song and Voice clips, tick \"Include computer sound\" in Teams or remote attendees hear nothing. Pre-load all clips before the call.\n\n━━━ ROUND 1 — TEXT ━━━\nThe two bios are already on slides 7–8 (the host card slides). Run the vote there, not here.\nAnswer: PROFILE A = HUMAN. Tell: \"asked three times today if he is a bot\" — too self-aware for an AI trying to pass.\n\n━━━ ROUND 2 — PHOTO ━━━\nShow your REAL team photo (you provide this) vs assets/generated/photo_decoy.png (AI-generated).\nAI tells: slightly too-smooth skin, repeated background elements, possible hand/finger anomaly.\nShare both images by pasting into Teams chat or screen-sharing a side-by-side.\n\n━━━ ROUND 3 — SONG ━━━\nTo generate your Suno clip, go to suno.com and use this prompt:\n  Prompt: \"Upbeat corporate pop anthem about AI taking over the office, sung by a suspiciously cheerful employee, synth-heavy, 80s vibe, verse-chorus structure\"\n  Style tags: pop, synth, upbeat, corporate\n  Length: ~45 seconds (use the trim feature)\nCompare it to any real 45-sec clip of a human-made song in the same vibe.\nSave both as .mp3, pre-load in browser tabs before the call.\n\n━━━ ROUND 4 — VOICE ━━━\nTo generate an ElevenLabs clone:\n  1. Go to elevenlabs.io → Voice Lab → Add Voice → Instant Voice Clone\n  2. Upload a 30–60s clean voice recording of yourself (assets/hosts/evan-lord/voice.mp3 if you have it)\n  3. Generate a clip reading: \"Hi everyone, I am definitely a real human person and I am very excited to be here today.\"\n  4. Play your real voice saying the same line, then the clone. Vote.\nThis round lands hardest — save it for last.",
+      "round1_bios": {
+        "profile_a": {
+          "label": "PROFILE A",
+          "movie": "Deus Ex Machina",
+          "if_agent": "If I were an agent I’d write rom com movie scripts, generate feature length films and hope other agents can feel something",
+          "bio": "Evan Lord is a Customer Experience practitioner at Slalom, working across marketing, advertising, and experience design. He believes the best experiences are felt, not engineered. He has been asked three times today if he is a bot."
+        },
+        "profile_b": {
+          "label": "PROFILE B",
+          "movie": "Her",
+          "if_agent": "If I were an agent, I would spend my cycles identifying the exact moment a customer stops trusting a brand — and make sure that moment never happens.",
+          "bio": "Evan Lord is a customer experience strategist at Slalom who spends most of his time finding the gap between what brands think their customers want and what actually makes them stay. He is drawn to the friction. That is where the interesting work lives."
+        }
+      },
+      "photo_decoy": "assets/generated/photo_decoy.png"
     },
     {
       "number": 11,
@@ -178,10 +256,22 @@
       "section_icon": "✓",
       "title": "State of the Business",
       "metrics": [
-        { "label": "YTD Revenue", "value": "[METRIC_PLACEHOLDER]" },
-        { "label": "Utilization", "value": "[METRIC_PLACEHOLDER]" },
-        { "label": "Run Rate", "value": "[METRIC_PLACEHOLDER]" },
-        { "label": "Projected Utilization", "value": "[METRIC_PLACEHOLDER]" }
+        {
+          "label": "YTD Revenue",
+          "value": "[METRIC_PLACEHOLDER]"
+        },
+        {
+          "label": "Utilization",
+          "value": "[METRIC_PLACEHOLDER]"
+        },
+        {
+          "label": "Run Rate",
+          "value": "[METRIC_PLACEHOLDER]"
+        },
+        {
+          "label": "Projected Utilization",
+          "value": "[METRIC_PLACEHOLDER]"
+        }
       ],
       "notes": "Fill in current metrics from your business review before the call."
     },
