@@ -298,7 +298,6 @@ function buildHostSlide(slide, s, host) {
   const cardY = 2.0;
   const cardW = 5.8;
   const cardH = 4.8;
-  const profileLabels = ['PROFILE A', 'PROFILE B'];
 
   (s.cards || []).forEach((c, i) => {
     const x = cardX[i];
@@ -308,11 +307,6 @@ function buildHostSlide(slide, s, host) {
       slide.addImage({ path: headshot, x: x + 0.2, y: cardY + 0.2, w: 1.3, h: 1.3 });
     }
 
-    slide.addText(profileLabels[i], {
-      x: x + 1.65, y: cardY + 0.25, w: 3.9, h: 0.28,
-      fontFace: F.eyebrow, fontSize: 10, bold: true, charSpacing: 1,
-      color: P.cyan, isTextBox: true, margin: 0, valign: 'middle'
-    });
     slide.addText(c.name, {
       x: x + 1.65, y: cardY + 0.55, w: 3.9, h: 0.45,
       fontFace: F.title, fontSize: 16, bold: true, color: P.lime,
@@ -360,9 +354,7 @@ function buildHostSlide(slide, s, host) {
   });
 
   if (host && host.linkedin_roast) {
-    addFootnote(slide, 'LinkedIn roast: ' + host.linkedin_roast, 6.88, {
-      x: 0.76, w: 11.8, h: 0.45, fontSize: 11, italic: true, color: MUTED, align: 'center'
-    });
+    s.notes = (s.notes || '') + `\n\nLinkedIn Roast: ${host.linkedin_roast}`;
   }
 }
 

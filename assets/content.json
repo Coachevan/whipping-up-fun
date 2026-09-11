@@ -163,8 +163,7 @@
       "section_icon": "◉",
       "title": "Work Spotlights",
       "body": "[SPOTLIGHT_PROJECT_PLACEHOLDER] · [SPOTLIGHT_CONTACT_PLACEHOLDER]",
-      "sub_note": "Summit Methodology Demo — see slide 15",
-      "notes": "Fill in current project spotlight before the call."
+      "notes": "Fill in current project spotlight before the call.\n\nSummit Methodology Demo — see slide 15"
     },
     {
       "number": 15,
@@ -193,7 +192,7 @@
       "body": "Thanks for joining!\nNext call: [NEXT_DATE_PLACEHOLDER]\nHosts: [NEXT_HOSTS_PLACEHOLDER]",
       "cta": "SPIN TO SELECT NEXT HOSTS →",
       "cta_url": "[WHEEL_URL_PLACEHOLDER]",
-      "wheel_note": "[WHEEL_URL_PLACEHOLDER — default: wheelofnames.com]",
+      "wheel_note": "[WHEEL_URL_PLACEHOLDER]",
       "notes": "Spin the wheel on wheelofnames.com to select the next hosts. Share your screen and let everyone watch. Prompt Roulette is OFF for this session (default)."
     }
   ],
