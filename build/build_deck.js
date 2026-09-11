@@ -48,6 +48,10 @@ const BG_MAP = {
   'host-cards-host-2': 'host',
   'turing-test': 'turing',
   'turing-rounds': 'divider',
+  'turing-round-1': 'turing',
+  'turing-round-2': 'turing',
+  'turing-round-3': 'turing',
+  'turing-round-4': 'turing',
   'punchline': 'punchline',
   'shout-outs': 'divider',
   'black-diamond-awards': 'divider',
@@ -461,7 +465,52 @@ builders['turing-rounds'] = (slide, s) => {
   });
 };
 
-/* 11 — punchline */
+/* 11-14 — individual turing round slides */
+function buildTuringRoundSingle(slide, s) {
+  addChrome(slide, BG_MAP[s.id], 62);
+  slide.addText(`ROUND ${s.round} OF ${s.round_total}`, {
+    x: 0.76, y: 0.58, w: 11.5, h: 0.32,
+    fontFace: F.eyebrow, fontSize: 10, bold: true, charSpacing: 3,
+    color: P.cyan, isTextBox: true, margin: 0, align: 'center', valign: 'middle'
+  });
+  if (s.icon) {
+    slide.addText(s.icon, {
+      x: 0.76, y: 1.1, w: 11.5, h: 0.85,
+      fontFace: F.body, fontSize: 52,
+      isTextBox: true, margin: 0, align: 'center', valign: 'middle'
+    });
+  }
+  slide.addText(String(s.category).toUpperCase(), {
+    x: 0.76, y: 2.05, w: 11.5, h: 0.38,
+    fontFace: F.eyebrow, fontSize: 14, bold: true, charSpacing: 4,
+    color: P.lime, isTextBox: true, margin: 0, align: 'center', valign: 'middle'
+  });
+  slide.addText(s.question || '', {
+    x: 1.5, y: 2.55, w: 10.0, h: 1.35,
+    fontFace: F.title, fontSize: 30, bold: true, color: WHITE,
+    isTextBox: true, margin: 0, align: 'center', valign: 'middle', wrap: true
+  });
+  slide.addShape(pres.ShapeType.line, {
+    x: 2.5, y: 4.0, w: 8.0, h: 0,
+    line: { color: '334466', width: 1 }
+  });
+  slide.addText(s.setup || '', {
+    x: 1.0, y: 4.15, w: 11.0, h: 1.05,
+    fontFace: F.body, fontSize: 13, color: MUTED,
+    isTextBox: true, margin: 0, align: 'center', valign: 'middle', wrap: true
+  });
+  slide.addText('↓  VOTE NOW  ↓', {
+    x: 0.76, y: 5.35, w: 11.5, h: 0.4,
+    fontFace: F.eyebrow, fontSize: 11, bold: true, charSpacing: 2,
+    color: P.lime, isTextBox: true, margin: 0, align: 'center', valign: 'middle'
+  });
+}
+builders['turing-round-1'] = buildTuringRoundSingle;
+builders['turing-round-2'] = buildTuringRoundSingle;
+builders['turing-round-3'] = buildTuringRoundSingle;
+builders['turing-round-4'] = buildTuringRoundSingle;
+
+/* 15 — punchline */
 builders['punchline'] = (slide, s) => {
   addChrome(slide, BG_MAP[s.id], 50);
   slide.addText(s.title, {

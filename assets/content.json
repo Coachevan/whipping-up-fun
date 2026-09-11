@@ -212,12 +212,60 @@
     },
     {
       "number": 11,
+      "id": "turing-round-1",
+      "round": 1,
+      "round_total": 4,
+      "category": "TEXT",
+      "icon": "📄",
+      "question": "Which bio was written by a human?",
+      "setup": "Both profiles are on the previous slides. Read them. Drop A or B in chat — on 3.",
+      "answer_reveal": "PROFILE A = HUMAN (Evan Lord). Tell: 'He has been asked three times today if he is a bot' — too self-aware for an AI trying to pass.",
+      "notes": "Run this round after showing the host card slides (7–8).\n\nAnswer: PROFILE A = HUMAN. The tell is the line 'He has been asked three times today if he is a bot' — a human wrote that; an AI trying to pass wouldn't undermine itself.\n\nAfter the vote: reveal answer, advance to Round 2."
+    },
+    {
+      "number": 12,
+      "id": "turing-round-2",
+      "round": 2,
+      "round_total": 4,
+      "category": "PHOTO",
+      "icon": "📷",
+      "question": "Real team photo — or AI-generated?",
+      "setup": "Show both images side by side. Paste into Teams chat or share a split screen. Vote A or B on 3.",
+      "answer_reveal": "Image B = AI-generated (Gemini Pro). Tells: too-perfect symmetry, overly smooth skin, repeated background elements, possible hand anomaly.",
+      "notes": "Before this slide: paste assets/generated/photo_decoy.png into Teams chat alongside your real team photo.\n\nAI tells to look for:\n• Skin textures slightly too smooth\n• Background elements slightly repeated\n• Hands or fingers may have extra digits\n• Symmetry just a bit too perfect\n\nAnswer: the Gemini-generated image is the fake. Reveal after the vote."
+    },
+    {
+      "number": 13,
+      "id": "turing-round-3",
+      "round": 3,
+      "round_total": 4,
+      "category": "SONG",
+      "icon": "🎵",
+      "question": "Human-made or Suno AI?",
+      "setup": "Play both clips back-to-back. ⚠️ Tick 'Include computer sound' in Teams! Vote A or B on 3.",
+      "answer_reveal": "Clip B = Suno AI. Tell: lyrics slightly on-the-nose, perfect timing, no breath or take variations.",
+      "notes": "⚠️ AUDIO SETUP: Tick 'Include computer sound' when screen sharing in Teams or remote attendees hear nothing. Pre-load both clips in browser tabs before the call.\n\nTo generate your Suno clip: go to suno.com and enter:\n  Prompt: \"Upbeat corporate pop anthem about AI taking over the office, sung by a suspiciously cheerful employee, synth-heavy, 80s vibe, verse-chorus structure\"\n  Style tags: pop, synth, upbeat, corporate\n  Length: ~45 seconds (use the trim feature)\n\nCompare against any real 45-second clip of a human-made song in the same vibe. Save both as .mp3. Suno clip is Clip B."
+    },
+    {
+      "number": 14,
+      "id": "turing-round-4",
+      "round": 4,
+      "round_total": 4,
+      "category": "VOICE",
+      "icon": "🎤",
+      "question": "Real voice — or ElevenLabs clone?",
+      "setup": "Play both recordings. Vote A or B on 3. No pressure — this one fools everyone.",
+      "answer_reveal": "Clip B = ElevenLabs voice clone. Tell: slightly too even, no natural pauses, vowels just slightly off.",
+      "notes": "FINAL ROUND — save this for last, it lands hardest.\n\n⚠️ AUDIO SETUP: Same as Round 3 — tick 'Include computer sound' in Teams.\n\nTo generate an ElevenLabs voice clone:\n  1. Go to elevenlabs.io → Voice Lab → Add Voice → Instant Voice Clone\n  2. Upload a 30–60s clean voice recording of yourself\n  3. Generate a clip reading: 'Hi everyone, I am definitely a real human person and I am very excited to be here today.'\n  4. Record yourself saying the same line\n  5. Play real voice first (Clip A), then clone (Clip B). Vote.\n\nThis round reliably fools ~60% of audiences. The tell is vowel shaping and the absence of any intake breath."
+    },
+    {
+      "number": 15,
       "id": "punchline",
       "title": "You'll never know if this deck was made by a human or an agent…",
       "notes": "Pause. Let it land. Do not explain it."
     },
     {
-      "number": 12,
+      "number": 16,
       "id": "shout-outs",
       "section_icon": "★",
       "title": "Shout Outs",
@@ -225,7 +273,7 @@
       "notes": "Fill in shout outs before the call."
     },
     {
-      "number": 13,
+      "number": 17,
       "id": "black-diamond-awards",
       "section_icon": "◆",
       "title": "Black Diamond Awards",
@@ -236,7 +284,7 @@
       "notes": "Deadline is TODAY (September 11). Remind everyone to submit before EOD. Awards given at December event.\n\nCTA URL: https://twodegrees1.sharepoint.com/sites/Capability-CX/SitePages/Black-Diamonds.aspx?d=w86f8489bc02e41d883b755c052d19b66&csf=1&web=1&e=81ar88"
     },
     {
-      "number": 14,
+      "number": 18,
       "id": "work-spotlights",
       "section_icon": "◉",
       "title": "Work Spotlights",
@@ -244,14 +292,14 @@
       "notes": "Fill in current project spotlight before the call.\n\nSummit Methodology Demo — see slide 15"
     },
     {
-      "number": 15,
+      "number": 19,
       "id": "summit-demo",
       "title": "Summit Methodology Demo",
       "body": "Presenter: [PRESENTER_PLACEHOLDER] · Topic: [DEMO_TOPIC_PLACEHOLDER]",
       "notes": "Fill in presenter and demo topic before the call."
     },
     {
-      "number": 16,
+      "number": 20,
       "id": "state-of-business",
       "section_icon": "✓",
       "title": "State of the Business",
@@ -276,7 +324,7 @@
       "notes": "Fill in current metrics from your business review before the call."
     },
     {
-      "number": 17,
+      "number": 21,
       "id": "wrap-up",
       "title": "Wrap Up",
       "body": "Thanks for joining!\nNext call: [NEXT_DATE_PLACEHOLDER]\nHosts: [NEXT_HOSTS_PLACEHOLDER]",
